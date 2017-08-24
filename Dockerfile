@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
     tcpdump \
     telnet \
     traceroute \
- && apt-get clean
-# && rm -rf /var/lib/apt/lists/*
+ && apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
 ENTRYPOINT ["bash"]
